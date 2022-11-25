@@ -13,8 +13,8 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
-          distribution: 'zulu'
-          cache: 'gradle'
+          distribution: 'adopt'
       - name: Run unit test
+        run : mvn --batch-mode --update-snapshots verify
         # run: ./githubactions_test/githubactions_test/HelloJunitTest.java
 
